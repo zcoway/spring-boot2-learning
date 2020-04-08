@@ -41,7 +41,10 @@
 - **chapter24：** [第二十五篇：打造属于自己的聊天室（WebSocket）](https://github.com/battcn/spring-boot2-learning/tree/master/chapter24)
 - **chapter25：** [第二十六篇：轻松搞定安全框架（Shiro）](https://github.com/battcn/spring-boot2-learning/tree/master/chapter25)
 - **chapter26：** [限流探索](https://github.com/battcn/spring-boot2-learning/tree/master/chapter26)
-- **chapter27：** [一起来学SpringBoot | 第二十七篇：优雅解决分布式限流](https://github.com/battcn/spring-boot2-learning/tree/master/chapter27)
+- **chapter27：** [第二十七篇：优雅解决分布式限流](https://github.com/battcn/spring-boot2-learning/tree/master/chapter27)
+- **chapter28：** [第二十八篇：JDK8 日期格式化](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
+- **chapter29：** [第二十八篇：整合dubbo](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
+- **chapter28：** [第二十八篇：服务保障、服务熔断(se)](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
 
 
 

@@ -11,6 +11,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * swagger
  *
@@ -48,8 +50,9 @@ public class UserController {
     @DeleteMapping("/{id}")
     @ApiOperation(value = "删除用户（DONE）")
     @ApiImplicitParam(name = "id", value = "用户编号", dataType = DataType.LONG, paramType = ParamType.PATH)
-    public void delete(@PathVariable Long id) {
-        log.info("单个参数用 ApiImplicitParam");
+    public void delete(@PathVariable Long id, HttpServletRequest request) {
+        String authorization = request.getHeader("Authorization");
+        log.info("单个参数用 ApiImplicitParam authorization="+authorization);
     }
 
     @PostMapping

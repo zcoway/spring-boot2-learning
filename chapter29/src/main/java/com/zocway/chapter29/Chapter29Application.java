@@ -12,7 +12,7 @@ public class Chapter29Application {
 	public static void main(String[] args) {
 		
 		// start embedded zookeeper server
-		new com.zocway.chapter29.EmbeddedZooKeeper(2181, false).start();
+		new EmbeddedZooKeeper(2181, false).start();
 
 		
 		SpringApplication.run(Chapter29Application.class, args);
