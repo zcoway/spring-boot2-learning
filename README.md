@@ -1,10 +1,6 @@
 # spring-boot2
 
-本文是基于 Spring Boot 2.x 版本进行的系列教程，欢迎关注我的公众号 **`battcn`**
-
-# 公众号
-
-![公众号](http://image.battcn.com/assets/images/wxgzh8cm.png)
+基于 Spring Boot 2.x 版本的练习
 
 # 推荐开源项目
 
@@ -43,8 +39,9 @@
 - **chapter26：** [限流探索](https://github.com/battcn/spring-boot2-learning/tree/master/chapter26)
 - **chapter27：** [第二十七篇：优雅解决分布式限流](https://github.com/battcn/spring-boot2-learning/tree/master/chapter27)
 - **chapter28：** [第二十八篇：JDK8 日期格式化](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
-- **chapter29：** [第二十八篇：整合dubbo](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
-- **chapter28：** [第二十八篇：服务保障、服务熔断(se)](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
+- **chapter29：** [第二十久篇：整合dubbo](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter29)
+- **chapter30：** [第三十篇：服务保障、服务熔断(sentinel)](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter30)
+- **chapter30：** [第三十一篇：整合rocketmq,基于消息可靠性实现数据最终一致性](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter31)
 
 
 
