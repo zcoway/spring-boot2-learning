@@ -12,7 +12,7 @@ import com.rocketmq.demo.model.dto.AccountChangeDTO;
  * @author ganguowei
  * @since 2020-04-09
  */
-public interface IAccountInfoService extends IService<AccountInfoDO> {
+public interface IAccountInfoBank1Service extends IService<AccountInfoDO> {
 
 
     /**
@@ -32,5 +32,5 @@ public interface IAccountInfoService extends IService<AccountInfoDO> {
     void doUpdateAccountBalance(AccountChangeDTO accountChangeEvent);
 
 
-    void addAccountInfoBalance(AccountChangeDTO accountChangeEvent);
+
 }
