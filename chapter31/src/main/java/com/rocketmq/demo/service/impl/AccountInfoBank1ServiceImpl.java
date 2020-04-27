@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.rocketmq.demo.model.dataobject.AccountInfoDO;
 import com.rocketmq.demo.model.dto.AccountChangeDTO;
 import com.rocketmq.demo.repository.AccountInfoMapper;
-import com.rocketmq.demo.service.IAccountInfoService;
+import com.rocketmq.demo.service.IAccountInfoBank1Service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.client.producer.TransactionSendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
@@ -25,10 +25,15 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Slf4j
-public class AccountInfoServiceImpl extends ServiceImpl<AccountInfoMapper, AccountInfoDO> implements IAccountInfoService {
+public class AccountInfoBank1ServiceImpl extends ServiceImpl<AccountInfoMapper, AccountInfoDO> implements IAccountInfoBank1Service {
 
     @Autowired
     private AccountInfoMapper accountInfoDao;
+
+    public AccountInfoBank1ServiceImpl() {
+        super();
+    }
+
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
 
@@ -68,25 +73,5 @@ public class AccountInfoServiceImpl extends ServiceImpl<AccountInfoMapper, Accou
         log.info("结束更新本地事务，事务号：{}",accountChangeEvent.getTxNo());
     }
 
-    /**
-     * 消费消息，更新本地事务，添加金额
-     * @param accountChangeEvent
-     */
-    @Override
-    @Transactional(rollbackFor = Exception.class)
-    public void addAccountInfoBalance(AccountChangeDTO accountChangeEvent) {
-        log.info("bank2更新本地账号，账号：{},金额：{}",accountChangeEvent.getAccountNo(),accountChangeEvent.getAmount());
-        //幂等校验
-        int existTx = accountInfoDao.isExistTx(accountChangeEvent.getTxNo());
-        if(existTx<=0){
-            //执行更新
-            accountInfoDao.updateAccountBalance(accountChangeEvent.getAccountNo(),accountChangeEvent.getAmount());
-            //添加事务记录
-            accountInfoDao.addTx(accountChangeEvent.getTxNo());
-            log.info("更新本地事务执行成功，本次事务号: {}", accountChangeEvent.getTxNo());
-        }else{
-            log.info("更新本地事务执行失败，本次事务号: {}", accountChangeEvent.getTxNo());
-        }
 
-    }
 }

@@ -3,7 +3,7 @@ package com.rocketmq.demo.handler;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.rocketmq.demo.model.dto.AccountChangeDTO;
-import com.rocketmq.demo.service.IAccountInfoService;
+import com.rocketmq.demo.service.IAccountInfoBank2Service;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
@@ -11,11 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RocketMQMessageListener(topic = "topic_txmsg",consumerGroup = "consumer_txmsg_group_bank2")
+@RocketMQMessageListener(topic = "topic_txmsg", consumerGroup = "consumer_txmsg_group_bank2")
 @Slf4j
 public class TxmsgConsumer implements RocketMQListener<String> {
     @Autowired
-    IAccountInfoService accountInfoService;
+    IAccountInfoBank2Service accountInfoService;
 
     @Override
     public void onMessage(String s) {

@@ -1,7 +1,7 @@
 package com.rocketmq.demo.controller;
 
 import com.rocketmq.demo.model.dto.AccountChangeDTO;
-import com.rocketmq.demo.service.IAccountInfoService;
+import com.rocketmq.demo.service.IAccountInfoBank1Service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import java.util.UUID;
 @Slf4j
 public class AccountInfoController {
     @Autowired
-    private IAccountInfoService accountInfoService;
+    private IAccountInfoBank1Service accountInfoService;
 
     @GetMapping(value = "/transfer")
     public String transfer(@RequestParam("accountNo")String accountNo, @RequestParam("amount") Double amount){
