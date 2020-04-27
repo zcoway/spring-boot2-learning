@@ -1,0 +1,1 @@
+INSERT INTO `account_info` VALUES (2, '张三的账户', '1', '', 10000);

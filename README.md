@@ -41,7 +41,8 @@
 - **chapter28：** [第二十八篇：JDK8 日期格式化](https://github.com/battcn/spring-boot2-learning/tree/master/chapter28)
 - **chapter29：** [第二十久篇：整合dubbo](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter29)
 - **chapter30：** [第三十篇：服务保障、服务熔断(sentinel)](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter30)
-- **chapter30：** [第三十一篇：整合rocketmq,基于消息可靠性实现数据最终一致性](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter31)
+- **chapter31：** [第三十一篇：整合rocketmq,基于消息可靠性实现数据最终一致性](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter31)
+- **chapter32：** [第三十一篇：Spring Boot启动过程及回调接口汇总](https://github.com/zcoway/spring-boot2-learning/tree/master/chapter32)
 
 
 
